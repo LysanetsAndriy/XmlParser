@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Works>
+  <Work>
+    <Author>С. С. Шкільняк</Author>
+    <WorkName>Математична логіка. Приклади і задачі: Навчальний посібник.</WorkName>
+    <Faculty>Факультет комп'ютерних наук та кібернетики</Faculty>
+    <Department>Кафедра теорії та технології програмування</Department>
+    <WorkType>Посібник</WorkType>
+    <Year>2007</Year>
+  </Work>
+  <Work>
+    <Author>С.С. Шкільняк, М.С. Нікітченко</Author>
+    <WorkName>Композиційно-номінативні логіки над ієрархічними даними</WorkName>
+    <Faculty>Факультет комп'ютерних наук та кібернетики</Faculty>
+    <Department>Кафедра теорії та технології програмування</Department>
+    <WorkType>Публікація</WorkType>
+    <Year>2010</Year>
+  </Work>
+</Works>

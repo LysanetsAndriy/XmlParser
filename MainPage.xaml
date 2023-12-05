@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XmlParser.MainPage">
+
+    <ScrollView Orientation="Horizontal" Margin="0,0,0,20">
+        <Grid Padding="0,0,0,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <HorizontalStackLayout Grid.Row="0" Grid.Column="0" Spacing="6" Padding="10">
+                
+                <Button Text="Вийти" Clicked="ExitButton_Clicked" BackgroundColor="Red" TextColor="Black"/>
+                <Button Text="Відкрити" Clicked="OpenButton_Clicked" BackgroundColor="Grey" TextColor="Black"/>
+                <Button Text="Зберегти" Clicked="SaveButton_Clicked" BackgroundColor="Green" TextColor="Black"/>
+                <Button Text="Знайти" Clicked="FindButton_Clicked" BackgroundColor="Blue" TextColor="Black"/>
+                <Button Text="Очистити" Clicked="ClearButton_Clicked" BackgroundColor="Yellow" TextColor="Black"/>
+                
+                <Picker x:Name="ParserPicker" Title="Choose parser type" SelectedIndexChanged="Parser_Selected">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>DOM</x:String>
+                            <x:String>SAX</x:String>
+                            <x:String>LINQ</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Grid.Row="1" Grid.Column="0" Padding="10" Spacing="6">
+
+                <Label WidthRequest="100" Text="Автор"  HorizontalOptions="Center" VerticalOptions="Center" />
+                <CheckBox x:Name="AuthorCheckbox"/>
+                <Entry x:Name="AuthorEntry" Placeholder="Уведіть П.І.П автора" WidthRequest="700" />
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Grid.Row="2" Grid.Column="0" Padding="10" Spacing="6">
+
+                <Label WidthRequest="100" Text="Назва матеріалу"  HorizontalOptions="Center" VerticalOptions="Center" />
+                <CheckBox x:Name="WorkNameCheckbox"/>
+                <Entry x:Name="WorkNameEntry" Placeholder="Уведіть назву матеріалу" WidthRequest="700" />
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Grid.Row="3" Grid.Column="0" Padding="10" Spacing="6">
+
+                <Label WidthRequest="100" Text="Факультет"  HorizontalOptions="Center" VerticalOptions="Center" />
+                <CheckBox x:Name="FacultyCheckbox"/>
+                <Entry x:Name="FacultyEntry" Placeholder="Уведіть назву факультету" WidthRequest="700" />
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Grid.Row="4" Grid.Column="0" Padding="10" Spacing="6">
+
+                <Label WidthRequest="100" Text="Кафедра"  HorizontalOptions="Center" VerticalOptions="Center" />
+                <CheckBox x:Name="DepartmentCheckbox"/>
+                <Entry x:Name="DepartmentEntry" Placeholder="Уведіть назву кафедри" WidthRequest="700" />
+                
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Grid.Row="5" Grid.Column="0" Padding="10" Spacing="6">
+                
+                <Label WidthRequest="100" Text="Вид матеріалу"  HorizontalOptions="Center" VerticalOptions="Center" />
+                <CheckBox x:Name="WorkTypeCheckbox"/>
+                <Entry x:Name="WorkTypeEntry" Placeholder="Уведіть вид матеріалу" WidthRequest="700" />
+                
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Grid.Row="6" Grid.Column="0" Padding="10" Spacing="6">
+
+                <Label WidthRequest="100" Text="Рік створення"  HorizontalOptions="Center" VerticalOptions="Center" />
+                <CheckBox x:Name="YearCheckbox"/>
+                <Entry x:Name="YearEntry" Placeholder="Уведіть рік створення матеріалу" WidthRequest="700" />
+
+            </HorizontalStackLayout>
+            <Grid
+                x:Name="Table"
+                Grid.Row="7"
+                Grid.Column="0"
+                Grid.RowSpan="6"
+                Padding="0, 10, 0, 0" >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Text="Автор" Margin="10"/>
+
+                <Label Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Text="Назва" Margin="10"/>
+
+                <Label Grid.Row="0" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" Text="Факультет" Margin="10"/>
+
+                <Label Grid.Row="0" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" Text="Кафедра" Margin="10"/>
+
+                <Label Grid.Row="0" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" Text="Вид матеріалу" Margin="10"/>
+
+                <Label Grid.Row="0" Grid.Column="5" VerticalOptions="Center" HorizontalOptions="Center" Text="Рік створення" Margin="10"/>
+
+            </Grid>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

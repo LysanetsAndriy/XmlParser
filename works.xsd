@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+       <xs:element name="Works">
+              <xs:complexType>
+                     <xs:sequence>
+                            <xs:element name="Work" maxOccurs="unbounded">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="Author" type="xs:string"></xs:element>
+                                                 <xs:element name="WorkName" type="xs:string"></xs:element>
+                                                 <xs:element name="Faculty" type="xs:string"></xs:element>
+                                                 <xs:element name="Department" type="xs:string"></xs:element>
+                                                 <xs:element name="WorkType" type="xs:string"></xs:element>
+                                                 <xs:element name="Year" type="xs:string"></xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                        </xs:sequence>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>
